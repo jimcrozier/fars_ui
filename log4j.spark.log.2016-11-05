@@ -1,0 +1,1076 @@
+16/11/05 12:04:57 INFO SparkContext: Running Spark version 1.6.2
+16/11/05 12:04:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/11/05 12:04:57 INFO SecurityManager: Changing view acls to: robertcrozier
+16/11/05 12:04:57 INFO SecurityManager: Changing modify acls to: robertcrozier
+16/11/05 12:04:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(robertcrozier); users with modify permissions: Set(robertcrozier)
+16/11/05 12:04:57 INFO Utils: Successfully started service 'sparkDriver' on port 61536.
+16/11/05 12:04:57 INFO Slf4jLogger: Slf4jLogger started
+16/11/05 12:04:57 INFO Remoting: Starting remoting
+16/11/05 12:04:57 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@127.0.0.1:61538]
+16/11/05 12:04:57 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 61538.
+16/11/05 12:04:57 INFO SparkEnv: Registering MapOutputTracker
+16/11/05 12:04:57 INFO SparkEnv: Registering BlockManagerMaster
+16/11/05 12:04:57 INFO DiskBlockManager: Created local directory at /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/blockmgr-67aeb3a7-3c46-4e35-9f03-77a3544c28bb
+16/11/05 12:04:57 INFO MemoryStore: MemoryStore started with capacity 511.1 MB
+16/11/05 12:04:57 INFO SparkEnv: Registering OutputCommitCoordinator
+16/11/05 12:04:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+16/11/05 12:04:58 INFO SparkUI: Started SparkUI at http://127.0.0.1:4040
+16/11/05 12:04:58 INFO HttpFileServer: HTTP File server directory is /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/httpd-39c0362a-39a5-41de-b580-40f797aecbab
+16/11/05 12:04:58 INFO HttpServer: Starting HTTP Server
+16/11/05 12:04:58 INFO Utils: Successfully started service 'HTTP file server' on port 61539.
+16/11/05 12:04:58 INFO SparkContext: Added JAR file:/Users/robertcrozier/.ivy2/jars/com.databricks_spark-csv_2.11-1.3.0.jar at http://127.0.0.1:61539/jars/com.databricks_spark-csv_2.11-1.3.0.jar with timestamp 1478361898197
+16/11/05 12:04:58 INFO SparkContext: Added JAR file:/Users/robertcrozier/.ivy2/jars/org.apache.commons_commons-csv-1.1.jar at http://127.0.0.1:61539/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1478361898199
+16/11/05 12:04:58 INFO SparkContext: Added JAR file:/Users/robertcrozier/.ivy2/jars/com.univocity_univocity-parsers-1.5.1.jar at http://127.0.0.1:61539/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1478361898200
+16/11/05 12:04:58 INFO SparkContext: Added JAR file:/Library/Frameworks/R.framework/Versions/3.3/Resources/library/sparklyr/java/sparklyr-1.6-2.10.jar at http://127.0.0.1:61539/jars/sparklyr-1.6-2.10.jar with timestamp 1478361898202
+16/11/05 12:04:58 INFO Executor: Starting executor ID driver on host localhost
+16/11/05 12:04:58 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 61542.
+16/11/05 12:04:58 INFO NettyBlockTransferService: Server created on 61542
+16/11/05 12:04:58 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 12:04:58 INFO BlockManagerMasterEndpoint: Registering block manager localhost:61542 with 511.1 MB RAM, BlockManagerId(driver, localhost, 61542)
+16/11/05 12:04:58 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 12:04:58 INFO HiveContext: Initializing execution hive, version 1.2.1
+16/11/05 12:04:58 INFO ClientWrapper: Inspected Hadoop version: 2.6.0
+16/11/05 12:04:58 INFO ClientWrapper: Loaded org.apache.hadoop.hive.shims.Hadoop23Shims for Hadoop version 2.6.0
+16/11/05 12:04:59 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+16/11/05 12:04:59 INFO ObjectStore: ObjectStore, initialize called
+16/11/05 12:04:59 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+16/11/05 12:04:59 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+16/11/05 12:04:59 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+16/11/05 12:04:59 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+16/11/05 12:05:00 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+16/11/05 12:05:00 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:00 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:01 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:01 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:01 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+16/11/05 12:05:01 INFO ObjectStore: Initialized ObjectStore
+16/11/05 12:05:01 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+16/11/05 12:05:01 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+16/11/05 12:05:02 WARN : Your hostname, Roberts-MBP resolves to a loopback/non-reachable address: fe80:0:0:0:6cc5:e549:2b0b:47bb%utun0, but we couldn't find any external IP address!
+16/11/05 12:05:07 INFO HiveMetaStore: Added admin role in metastore
+16/11/05 12:05:07 INFO HiveMetaStore: Added public role in metastore
+16/11/05 12:05:07 INFO HiveMetaStore: No user is added in admin role, since config is empty
+16/11/05 12:05:07 INFO HiveMetaStore: 0: get_all_databases
+16/11/05 12:05:07 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_all_databases	
+16/11/05 12:05:07 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+16/11/05 12:05:07 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+16/11/05 12:05:07 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:07 INFO SessionState: Created HDFS directory: /tmp/hive/robertcrozier
+16/11/05 12:05:08 INFO SessionState: Created local directory: /var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/robertcrozier
+16/11/05 12:05:08 INFO SessionState: Created local directory: /var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/618c15a2-0c57-498a-98e9-5b2ba2f942a9_resources
+16/11/05 12:05:08 INFO SessionState: Created HDFS directory: /tmp/hive/robertcrozier/618c15a2-0c57-498a-98e9-5b2ba2f942a9
+16/11/05 12:05:08 INFO SessionState: Created local directory: /var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/robertcrozier/618c15a2-0c57-498a-98e9-5b2ba2f942a9
+16/11/05 12:05:08 INFO SessionState: Created HDFS directory: /tmp/hive/robertcrozier/618c15a2-0c57-498a-98e9-5b2ba2f942a9/_tmp_space.db
+16/11/05 12:05:08 INFO HiveContext: default warehouse location is /user/hive/warehouse
+16/11/05 12:05:08 INFO HiveContext: Initializing HiveMetastoreConnection version 1.2.1 using Spark classes.
+16/11/05 12:05:08 INFO ClientWrapper: Inspected Hadoop version: 2.6.0
+16/11/05 12:05:08 INFO ClientWrapper: Loaded org.apache.hadoop.hive.shims.Hadoop23Shims for Hadoop version 2.6.0
+16/11/05 12:05:08 INFO HiveMetaStore: 0: Opening raw store with implemenation class:org.apache.hadoop.hive.metastore.ObjectStore
+16/11/05 12:05:08 INFO ObjectStore: ObjectStore, initialize called
+16/11/05 12:05:08 INFO Persistence: Property hive.metastore.integral.jdo.pushdown unknown - will be ignored
+16/11/05 12:05:08 INFO Persistence: Property datanucleus.cache.level2 unknown - will be ignored
+16/11/05 12:05:08 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+16/11/05 12:05:08 WARN Connection: BoneCP specified but not present in CLASSPATH (or one of dependencies)
+16/11/05 12:05:09 INFO ObjectStore: Setting MetaStore object pin classes with hive.metastore.cache.pinobjtypes="Table,StorageDescriptor,SerDeInfo,Partition,Database,Type,FieldSchema,Order"
+16/11/05 12:05:09 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:09 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:10 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MFieldSchema" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:10 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MOrder" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:10 INFO MetaStoreDirectSql: Using direct SQL, underlying DB is DERBY
+16/11/05 12:05:10 INFO ObjectStore: Initialized ObjectStore
+16/11/05 12:05:10 WARN ObjectStore: Version information not found in metastore. hive.metastore.schema.verification is not enabled so recording the schema version 1.2.0
+16/11/05 12:05:10 WARN ObjectStore: Failed to get database default, returning NoSuchObjectException
+16/11/05 12:05:10 INFO HiveMetaStore: Added admin role in metastore
+16/11/05 12:05:10 INFO HiveMetaStore: Added public role in metastore
+16/11/05 12:05:10 INFO HiveMetaStore: No user is added in admin role, since config is empty
+16/11/05 12:05:10 INFO HiveMetaStore: 0: get_all_databases
+16/11/05 12:05:10 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_all_databases	
+16/11/05 12:05:10 INFO HiveMetaStore: 0: get_functions: db=default pat=*
+16/11/05 12:05:10 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_functions: db=default pat=*	
+16/11/05 12:05:10 INFO Datastore: The class "org.apache.hadoop.hive.metastore.model.MResourceUri" is tagged as "embedded-only" so does not have its own datastore table.
+16/11/05 12:05:10 INFO SessionState: Created local directory: /var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/a217188f-08cb-4370-8162-bdb68c71b1bd_resources
+16/11/05 12:05:10 INFO SessionState: Created HDFS directory: /tmp/hive/robertcrozier/a217188f-08cb-4370-8162-bdb68c71b1bd
+16/11/05 12:05:10 INFO SessionState: Created local directory: /var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/robertcrozier/a217188f-08cb-4370-8162-bdb68c71b1bd
+16/11/05 12:05:10 INFO SessionState: Created HDFS directory: /tmp/hive/robertcrozier/a217188f-08cb-4370-8162-bdb68c71b1bd/_tmp_space.db
+16/11/05 12:05:11 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:05:11 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:08:55 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:08:55 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:08:55 INFO SparkContext: Starting job: collect at utils.scala:59
+16/11/05 12:08:55 INFO DAGScheduler: Got job 0 (collect at utils.scala:59) with 1 output partitions
+16/11/05 12:08:55 INFO DAGScheduler: Final stage: ResultStage 0 (collect at utils.scala:59)
+16/11/05 12:08:55 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:08:55 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:08:55 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:56), which has no missing parents
+16/11/05 12:08:55 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 5.4 KB, free 5.4 KB)
+16/11/05 12:08:55 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 3.0 KB, free 8.4 KB)
+16/11/05 12:08:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:61542 (size: 3.0 KB, free: 511.1 MB)
+16/11/05 12:08:55 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:55 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at map at utils.scala:56)
+16/11/05 12:08:55 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+16/11/05 12:08:55 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0,PROCESS_LOCAL, 2396 bytes)
+16/11/05 12:08:55 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+16/11/05 12:08:55 INFO Executor: Fetching http://127.0.0.1:61539/jars/com.univocity_univocity-parsers-1.5.1.jar with timestamp 1478361898200
+16/11/05 12:08:55 INFO Utils: Fetching http://127.0.0.1:61539/jars/com.univocity_univocity-parsers-1.5.1.jar to /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/fetchFileTemp2158535206144621611.tmp
+16/11/05 12:08:55 INFO Executor: Adding file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/com.univocity_univocity-parsers-1.5.1.jar to class loader
+16/11/05 12:08:55 INFO Executor: Fetching http://127.0.0.1:61539/jars/org.apache.commons_commons-csv-1.1.jar with timestamp 1478361898199
+16/11/05 12:08:55 INFO Utils: Fetching http://127.0.0.1:61539/jars/org.apache.commons_commons-csv-1.1.jar to /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/fetchFileTemp5228945480026749117.tmp
+16/11/05 12:08:55 INFO Executor: Adding file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/org.apache.commons_commons-csv-1.1.jar to class loader
+16/11/05 12:08:55 INFO Executor: Fetching http://127.0.0.1:61539/jars/sparklyr-1.6-2.10.jar with timestamp 1478361898202
+16/11/05 12:08:55 INFO Utils: Fetching http://127.0.0.1:61539/jars/sparklyr-1.6-2.10.jar to /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/fetchFileTemp6352891290172830761.tmp
+16/11/05 12:08:55 INFO Executor: Adding file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/sparklyr-1.6-2.10.jar to class loader
+16/11/05 12:08:55 INFO Executor: Fetching http://127.0.0.1:61539/jars/com.databricks_spark-csv_2.11-1.3.0.jar with timestamp 1478361898197
+16/11/05 12:08:55 INFO Utils: Fetching http://127.0.0.1:61539/jars/com.databricks_spark-csv_2.11-1.3.0.jar to /private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/fetchFileTemp6790564473541279699.tmp
+16/11/05 12:08:55 INFO Executor: Adding file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/spark-a165eedd-422e-4850-b343-261fd6c52a1e/userFiles-ac6ef765-217d-44db-92b1-7bff2e513ece/com.databricks_spark-csv_2.11-1.3.0.jar to class loader
+16/11/05 12:08:55 INFO GenerateUnsafeProjection: Code generated in 90.373305 ms
+16/11/05 12:08:55 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 1060 bytes result sent to driver
+16/11/05 12:08:55 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 228 ms on localhost (1/1)
+16/11/05 12:08:55 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+16/11/05 12:08:55 INFO DAGScheduler: ResultStage 0 (collect at utils.scala:59) finished in 0.237 s
+16/11/05 12:08:55 INFO DAGScheduler: Job 0 finished: collect at utils.scala:59, took 0.325325 s
+16/11/05 12:08:55 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:08:55 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:08:55 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 61.8 KB, free 70.2 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 19.3 KB, free 89.5 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO SparkContext: Created broadcast 1 from textFile at TextFile.scala:30
+16/11/05 12:08:56 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:08:56 INFO SparkContext: Starting job: take at CsvRelation.scala:249
+16/11/05 12:08:56 INFO DAGScheduler: Got job 1 (take at CsvRelation.scala:249) with 1 output partitions
+16/11/05 12:08:56 INFO DAGScheduler: Final stage: ResultStage 1 (take at CsvRelation.scala:249)
+16/11/05 12:08:56 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:08:56 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:08:56 INFO DAGScheduler: Submitting ResultStage 1 (/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T//Rtmppejlvd/file569050b9ee03.csv MapPartitionsRDD[7] at textFile at TextFile.scala:30), which has no missing parents
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.1 KB, free 92.7 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 1901.0 B, free 94.5 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on localhost:61542 (size: 1901.0 B, free: 511.1 MB)
+16/11/05 12:08:56 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T//Rtmppejlvd/file569050b9ee03.csv MapPartitionsRDD[7] at textFile at TextFile.scala:30)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+16/11/05 12:08:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0,PROCESS_LOCAL, 2478 bytes)
+16/11/05 12:08:56 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+16/11/05 12:08:56 INFO HadoopRDD: Input split: file:/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/file569050b9ee03.csv:0+2013
+16/11/05 12:08:56 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+16/11/05 12:08:56 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+16/11/05 12:08:56 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+16/11/05 12:08:56 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+16/11/05 12:08:56 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+16/11/05 12:08:56 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2354 bytes result sent to driver
+16/11/05 12:08:56 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 33 ms on localhost (1/1)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+16/11/05 12:08:56 INFO DAGScheduler: ResultStage 1 (take at CsvRelation.scala:249) finished in 0.033 s
+16/11/05 12:08:56 INFO DAGScheduler: Job 1 finished: take at CsvRelation.scala:249, took 0.039807 s
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 208.5 KB, free 303.0 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 19.3 KB, free 322.4 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO SparkContext: Created broadcast 3 from textFile at TextFile.scala:30
+16/11/05 12:08:56 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:08:56 INFO SparkContext: Starting job: sql at NativeMethodAccessorImpl.java:-2
+16/11/05 12:08:56 INFO DAGScheduler: Registering RDD 17 (sql at NativeMethodAccessorImpl.java:-2)
+16/11/05 12:08:56 INFO DAGScheduler: Got job 2 (sql at NativeMethodAccessorImpl.java:-2) with 1 output partitions
+16/11/05 12:08:56 INFO DAGScheduler: Final stage: ResultStage 3 (sql at NativeMethodAccessorImpl.java:-2)
+16/11/05 12:08:56 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)
+16/11/05 12:08:56 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 2)
+16/11/05 12:08:56 INFO DAGScheduler: Submitting ShuffleMapStage 2 (MapPartitionsRDD[17] at sql at NativeMethodAccessorImpl.java:-2), which has no missing parents
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 18.2 KB, free 340.6 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 8.6 KB, free 349.2 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on localhost:61542 (size: 8.6 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:56 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 2 (MapPartitionsRDD[17] at sql at NativeMethodAccessorImpl.java:-2)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Adding task set 2.0 with 2 tasks
+16/11/05 12:08:56 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0,PROCESS_LOCAL, 2467 bytes)
+16/11/05 12:08:56 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 3, localhost, partition 1,PROCESS_LOCAL, 2467 bytes)
+16/11/05 12:08:56 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+16/11/05 12:08:56 INFO Executor: Running task 1.0 in stage 2.0 (TID 3)
+16/11/05 12:08:56 INFO CacheManager: Partition rdd_14_0 not found, computing it
+16/11/05 12:08:56 INFO CacheManager: Partition rdd_14_1 not found, computing it
+16/11/05 12:08:56 INFO HadoopRDD: Input split: file:/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/file569050b9ee03.csv:0+2013
+16/11/05 12:08:56 INFO HadoopRDD: Input split: file:/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/file569050b9ee03.csv:2013+2013
+16/11/05 12:08:56 INFO GenerateUnsafeProjection: Code generated in 14.79829 ms
+16/11/05 12:08:56 INFO MemoryStore: Block rdd_14_0 stored as values in memory (estimated size 3.2 KB, free 352.4 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block rdd_14_1 stored as values in memory (estimated size 3.1 KB, free 355.5 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO GeneratePredicate: Code generated in 2.940942 ms
+16/11/05 12:08:56 INFO GenerateColumnAccessor: Code generated in 12.15548 ms
+16/11/05 12:08:56 INFO GenerateMutableProjection: Code generated in 5.261209 ms
+16/11/05 12:08:56 INFO GenerateUnsafeProjection: Code generated in 3.8933 ms
+16/11/05 12:08:56 INFO GenerateMutableProjection: Code generated in 5.438117 ms
+16/11/05 12:08:56 INFO GenerateUnsafeRowJoiner: Code generated in 3.796508 ms
+16/11/05 12:08:56 INFO GenerateUnsafeProjection: Code generated in 5.25308 ms
+16/11/05 12:08:56 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 3784 bytes result sent to driver
+16/11/05 12:08:56 INFO Executor: Finished task 1.0 in stage 2.0 (TID 3). 3787 bytes result sent to driver
+16/11/05 12:08:56 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 3) in 197 ms on localhost (1/2)
+16/11/05 12:08:56 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 198 ms on localhost (2/2)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+16/11/05 12:08:56 INFO DAGScheduler: ShuffleMapStage 2 (sql at NativeMethodAccessorImpl.java:-2) finished in 0.199 s
+16/11/05 12:08:56 INFO DAGScheduler: looking for newly runnable stages
+16/11/05 12:08:56 INFO DAGScheduler: running: Set()
+16/11/05 12:08:56 INFO DAGScheduler: waiting: Set(ResultStage 3)
+16/11/05 12:08:56 INFO DAGScheduler: failed: Set()
+16/11/05 12:08:56 INFO DAGScheduler: Submitting ResultStage 3 (MapPartitionsRDD[20] at sql at NativeMethodAccessorImpl.java:-2), which has no missing parents
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 9.3 KB, free 364.8 KB)
+16/11/05 12:08:56 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 4.6 KB, free 369.4 KB)
+16/11/05 12:08:56 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on localhost:61542 (size: 4.6 KB, free: 511.1 MB)
+16/11/05 12:08:56 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[20] at sql at NativeMethodAccessorImpl.java:-2)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+16/11/05 12:08:56 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 4, localhost, partition 0,NODE_LOCAL, 2290 bytes)
+16/11/05 12:08:56 INFO Executor: Running task 0.0 in stage 3.0 (TID 4)
+16/11/05 12:08:56 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/05 12:08:56 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+16/11/05 12:08:56 INFO GenerateMutableProjection: Code generated in 5.44196 ms
+16/11/05 12:08:56 INFO GenerateMutableProjection: Code generated in 4.162031 ms
+16/11/05 12:08:56 INFO Executor: Finished task 0.0 in stage 3.0 (TID 4). 1830 bytes result sent to driver
+16/11/05 12:08:56 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 4) in 56 ms on localhost (1/1)
+16/11/05 12:08:56 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+16/11/05 12:08:56 INFO DAGScheduler: ResultStage 3 (sql at NativeMethodAccessorImpl.java:-2) finished in 0.057 s
+16/11/05 12:08:56 INFO DAGScheduler: Job 2 finished: sql at NativeMethodAccessorImpl.java:-2, took 0.283314 s
+16/11/05 12:08:56 INFO ParseDriver: Parsing command: SELECT count(*) FROM `iris`
+16/11/05 12:08:57 INFO ParseDriver: Parse Completed
+16/11/05 12:08:57 INFO SparkContext: Starting job: collect at utils.scala:181
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 12
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 11
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 10
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 9
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 8
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 7
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 6
+16/11/05 12:08:57 INFO DAGScheduler: Registering RDD 24 (collect at utils.scala:181)
+16/11/05 12:08:57 INFO DAGScheduler: Got job 3 (collect at utils.scala:181) with 1 output partitions
+16/11/05 12:08:57 INFO DAGScheduler: Final stage: ResultStage 5 (collect at utils.scala:181)
+16/11/05 12:08:57 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 4)
+16/11/05 12:08:57 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 4)
+16/11/05 12:08:57 INFO DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[24] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:08:57 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 18.3 KB, free 387.7 KB)
+16/11/05 12:08:57 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 8.6 KB, free 396.3 KB)
+16/11/05 12:08:57 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on localhost:61542 (size: 8.6 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:57 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[24] at collect at utils.scala:181)
+16/11/05 12:08:57 INFO TaskSchedulerImpl: Adding task set 4.0 with 2 tasks
+16/11/05 12:08:57 INFO BlockManagerInfo: Removed broadcast_2_piece0 on localhost:61542 in memory (size: 1901.0 B, free: 511.1 MB)
+16/11/05 12:08:57 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 5, localhost, partition 0,PROCESS_LOCAL, 2467 bytes)
+16/11/05 12:08:57 INFO TaskSetManager: Starting task 1.0 in stage 4.0 (TID 6, localhost, partition 1,PROCESS_LOCAL, 2467 bytes)
+16/11/05 12:08:57 INFO Executor: Running task 0.0 in stage 4.0 (TID 5)
+16/11/05 12:08:57 INFO Executor: Running task 1.0 in stage 4.0 (TID 6)
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 4
+16/11/05 12:08:57 INFO BlockManagerInfo: Removed broadcast_1_piece0 on localhost:61542 in memory (size: 19.3 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO BlockManagerInfo: Removed broadcast_0_piece0 on localhost:61542 in memory (size: 3.0 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 3
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 2
+16/11/05 12:08:57 INFO BlockManager: Found block rdd_14_1 locally
+16/11/05 12:08:57 INFO BlockManager: Found block rdd_14_0 locally
+16/11/05 12:08:57 INFO BlockManagerInfo: Removed broadcast_5_piece0 on localhost:61542 in memory (size: 4.6 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 15
+16/11/05 12:08:57 INFO BlockManagerInfo: Removed broadcast_4_piece0 on localhost:61542 in memory (size: 8.6 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 14
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned shuffle 0
+16/11/05 12:08:57 INFO ContextCleaner: Cleaned accumulator 13
+16/11/05 12:08:57 INFO Executor: Finished task 0.0 in stage 4.0 (TID 5). 2679 bytes result sent to driver
+16/11/05 12:08:57 INFO Executor: Finished task 1.0 in stage 4.0 (TID 6). 2679 bytes result sent to driver
+16/11/05 12:08:57 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 5) in 16 ms on localhost (1/2)
+16/11/05 12:08:57 INFO TaskSetManager: Finished task 1.0 in stage 4.0 (TID 6) in 15 ms on localhost (2/2)
+16/11/05 12:08:57 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+16/11/05 12:08:57 INFO DAGScheduler: ShuffleMapStage 4 (collect at utils.scala:181) finished in 0.017 s
+16/11/05 12:08:57 INFO DAGScheduler: looking for newly runnable stages
+16/11/05 12:08:57 INFO DAGScheduler: running: Set()
+16/11/05 12:08:57 INFO DAGScheduler: waiting: Set(ResultStage 5)
+16/11/05 12:08:57 INFO DAGScheduler: failed: Set()
+16/11/05 12:08:57 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[27] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:08:57 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 9.4 KB, free 270.5 KB)
+16/11/05 12:08:57 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 4.6 KB, free 275.1 KB)
+16/11/05 12:08:57 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on localhost:61542 (size: 4.6 KB, free: 511.1 MB)
+16/11/05 12:08:57 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:08:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[27] at collect at utils.scala:181)
+16/11/05 12:08:57 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+16/11/05 12:08:57 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 7, localhost, partition 0,NODE_LOCAL, 2290 bytes)
+16/11/05 12:08:57 INFO Executor: Running task 0.0 in stage 5.0 (TID 7)
+16/11/05 12:08:57 INFO ShuffleBlockFetcherIterator: Getting 2 non-empty blocks out of 2 blocks
+16/11/05 12:08:57 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 0 ms
+16/11/05 12:08:57 INFO Executor: Finished task 0.0 in stage 5.0 (TID 7). 1830 bytes result sent to driver
+16/11/05 12:08:57 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 7) in 6 ms on localhost (1/1)
+16/11/05 12:08:57 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+16/11/05 12:08:57 INFO DAGScheduler: ResultStage 5 (collect at utils.scala:181) finished in 0.007 s
+16/11/05 12:08:57 INFO DAGScheduler: Job 3 finished: collect at utils.scala:181, took 0.034296 s
+16/11/05 12:08:57 INFO ParseDriver: Parsing command: SELECT *
+FROM `iris` AS `zzz1`
+WHERE (0 = 1)
+16/11/05 12:08:57 INFO ParseDriver: Parse Completed
+16/11/05 12:08:57 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:08:57 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:11:06 INFO ParseDriver: Parsing command: SELECT *
+FROM `iris`
+16/11/05 12:11:06 INFO ParseDriver: Parse Completed
+16/11/05 12:11:06 INFO SparkContext: Starting job: collect at utils.scala:181
+16/11/05 12:11:06 INFO DAGScheduler: Got job 4 (collect at utils.scala:181) with 2 output partitions
+16/11/05 12:11:06 INFO DAGScheduler: Final stage: ResultStage 6 (collect at utils.scala:181)
+16/11/05 12:11:06 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:11:06 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:11:06 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[30] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 13.8 KB, free 288.9 KB)
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 6.7 KB, free 295.6 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on localhost:61542 (size: 6.7 KB, free: 511.1 MB)
+16/11/05 12:11:06 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:11:06 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 6 (MapPartitionsRDD[30] at collect at utils.scala:181)
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Adding task set 6.0 with 2 tasks
+16/11/05 12:11:06 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8, localhost, partition 0,PROCESS_LOCAL, 2478 bytes)
+16/11/05 12:11:06 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 9, localhost, partition 1,PROCESS_LOCAL, 2478 bytes)
+16/11/05 12:11:06 INFO Executor: Running task 0.0 in stage 6.0 (TID 8)
+16/11/05 12:11:06 INFO Executor: Running task 1.0 in stage 6.0 (TID 9)
+16/11/05 12:11:06 INFO BlockManager: Found block rdd_14_0 locally
+16/11/05 12:11:06 INFO BlockManager: Found block rdd_14_1 locally
+16/11/05 12:11:06 INFO GenerateColumnAccessor: Code generated in 12.887017 ms
+16/11/05 12:11:06 INFO Executor: Finished task 0.0 in stage 6.0 (TID 8). 8298 bytes result sent to driver
+16/11/05 12:11:06 INFO Executor: Finished task 1.0 in stage 6.0 (TID 9). 8376 bytes result sent to driver
+16/11/05 12:11:06 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 23 ms on localhost (1/2)
+16/11/05 12:11:06 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 9) in 23 ms on localhost (2/2)
+16/11/05 12:11:06 INFO DAGScheduler: ResultStage 6 (collect at utils.scala:181) finished in 0.023 s
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+16/11/05 12:11:06 INFO DAGScheduler: Job 4 finished: collect at utils.scala:181, took 0.027866 s
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 208.5 KB, free 504.1 KB)
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 19.3 KB, free 523.4 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 12:11:06 INFO SparkContext: Created broadcast 9 from textFile at TextFile.scala:30
+16/11/05 12:11:06 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:11:06 INFO SparkContext: Starting job: take at CsvRelation.scala:249
+16/11/05 12:11:06 INFO DAGScheduler: Got job 5 (take at CsvRelation.scala:249) with 1 output partitions
+16/11/05 12:11:06 INFO DAGScheduler: Final stage: ResultStage 7 (take at CsvRelation.scala:249)
+16/11/05 12:11:06 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:11:06 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:11:06 INFO DAGScheduler: Submitting ResultStage 7 (/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv MapPartitionsRDD[32] at textFile at TextFile.scala:30), which has no missing parents
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 3.2 KB, free 526.6 KB)
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 1972.0 B, free 528.6 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on localhost:61542 (size: 1972.0 B, free: 511.1 MB)
+16/11/05 12:11:06 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:11:06 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv MapPartitionsRDD[32] at textFile at TextFile.scala:30)
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+16/11/05 12:11:06 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 10, localhost, partition 0,PROCESS_LOCAL, 2545 bytes)
+16/11/05 12:11:06 INFO Executor: Running task 0.0 in stage 7.0 (TID 10)
+16/11/05 12:11:06 INFO HadoopRDD: Input split: file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv:0+1929
+16/11/05 12:11:06 INFO Executor: Finished task 0.0 in stage 7.0 (TID 10). 2332 bytes result sent to driver
+16/11/05 12:11:06 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 10) in 5 ms on localhost (1/1)
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+16/11/05 12:11:06 INFO DAGScheduler: ResultStage 7 (take at CsvRelation.scala:249) finished in 0.005 s
+16/11/05 12:11:06 INFO DAGScheduler: Job 5 finished: take at CsvRelation.scala:249, took 0.008881 s
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 208.5 KB, free 737.1 KB)
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 19.3 KB, free 756.4 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.0 MB)
+16/11/05 12:11:06 INFO SparkContext: Created broadcast 11 from textFile at TextFile.scala:30
+16/11/05 12:11:06 INFO ParseDriver: Parsing command: SELECT *
+FROM `sparklyr_tmp_56905aa90de2` AS `zzz2`
+WHERE (0 = 1)
+16/11/05 12:11:06 INFO ParseDriver: Parse Completed
+16/11/05 12:11:06 INFO ParseDriver: Parsing command: SELECT *
+FROM `sparklyr_tmp_56905aa90de2`
+LIMIT 10
+16/11/05 12:11:06 INFO ParseDriver: Parse Completed
+16/11/05 12:11:06 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:11:06 INFO SparkContext: Starting job: collect at utils.scala:181
+16/11/05 12:11:06 INFO DAGScheduler: Got job 6 (collect at utils.scala:181) with 1 output partitions
+16/11/05 12:11:06 INFO DAGScheduler: Final stage: ResultStage 8 (collect at utils.scala:181)
+16/11/05 12:11:06 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:11:06 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:11:06 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[42] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 14.1 KB, free 770.5 KB)
+16/11/05 12:11:06 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 6.8 KB, free 777.3 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on localhost:61542 (size: 6.8 KB, free: 511.0 MB)
+16/11/05 12:11:06 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:11:06 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[42] at collect at utils.scala:181)
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+16/11/05 12:11:06 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 11, localhost, partition 0,PROCESS_LOCAL, 2545 bytes)
+16/11/05 12:11:06 INFO Executor: Running task 0.0 in stage 8.0 (TID 11)
+16/11/05 12:11:06 INFO CacheManager: Partition rdd_39_0 not found, computing it
+16/11/05 12:11:06 INFO HadoopRDD: Input split: file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv:0+1929
+16/11/05 12:11:06 INFO MemoryStore: Block rdd_39_0 stored as values in memory (estimated size 3.2 KB, free 780.5 KB)
+16/11/05 12:11:06 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.0 MB)
+16/11/05 12:11:06 INFO GenerateSafeProjection: Code generated in 6.972409 ms
+16/11/05 12:11:06 INFO Executor: Finished task 0.0 in stage 8.0 (TID 11). 4576 bytes result sent to driver
+16/11/05 12:11:06 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 11) in 29 ms on localhost (1/1)
+16/11/05 12:11:06 INFO DAGScheduler: ResultStage 8 (collect at utils.scala:181) finished in 0.029 s
+16/11/05 12:11:06 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+16/11/05 12:11:06 INFO DAGScheduler: Job 6 finished: collect at utils.scala:181, took 0.034345 s
+16/11/05 12:11:06 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:11:06 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:14:14 INFO ParseDriver: Parsing command: SELECT *
+FROM `iris`
+16/11/05 12:14:14 INFO ParseDriver: Parse Completed
+16/11/05 12:14:14 INFO SparkContext: Starting job: collect at utils.scala:181
+16/11/05 12:14:14 INFO DAGScheduler: Got job 7 (collect at utils.scala:181) with 2 output partitions
+16/11/05 12:14:14 INFO DAGScheduler: Final stage: ResultStage 9 (collect at utils.scala:181)
+16/11/05 12:14:14 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:14:14 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:14:14 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[45] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 13.8 KB, free 794.3 KB)
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 6.7 KB, free 801.0 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on localhost:61542 (size: 6.7 KB, free: 511.0 MB)
+16/11/05 12:14:14 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:14:14 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 9 (MapPartitionsRDD[45] at collect at utils.scala:181)
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Adding task set 9.0 with 2 tasks
+16/11/05 12:14:14 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 12, localhost, partition 0,PROCESS_LOCAL, 2478 bytes)
+16/11/05 12:14:14 INFO TaskSetManager: Starting task 1.0 in stage 9.0 (TID 13, localhost, partition 1,PROCESS_LOCAL, 2478 bytes)
+16/11/05 12:14:14 INFO Executor: Running task 0.0 in stage 9.0 (TID 12)
+16/11/05 12:14:14 INFO Executor: Running task 1.0 in stage 9.0 (TID 13)
+16/11/05 12:14:14 INFO BlockManager: Found block rdd_14_0 locally
+16/11/05 12:14:14 INFO BlockManager: Found block rdd_14_1 locally
+16/11/05 12:14:14 INFO Executor: Finished task 1.0 in stage 9.0 (TID 13). 8376 bytes result sent to driver
+16/11/05 12:14:14 INFO Executor: Finished task 0.0 in stage 9.0 (TID 12). 8298 bytes result sent to driver
+16/11/05 12:14:14 INFO TaskSetManager: Finished task 1.0 in stage 9.0 (TID 13) in 6 ms on localhost (1/2)
+16/11/05 12:14:14 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 12) in 6 ms on localhost (2/2)
+16/11/05 12:14:14 INFO DAGScheduler: ResultStage 9 (collect at utils.scala:181) finished in 0.006 s
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+16/11/05 12:14:14 INFO DAGScheduler: Job 7 finished: collect at utils.scala:181, took 0.011042 s
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 208.5 KB, free 1009.5 KB)
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 19.3 KB, free 1028.8 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.0 MB)
+16/11/05 12:14:14 INFO SparkContext: Created broadcast 14 from textFile at TextFile.scala:30
+16/11/05 12:14:14 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:14:14 INFO SparkContext: Starting job: take at CsvRelation.scala:249
+16/11/05 12:14:14 INFO DAGScheduler: Got job 8 (take at CsvRelation.scala:249) with 1 output partitions
+16/11/05 12:14:14 INFO DAGScheduler: Final stage: ResultStage 10 (take at CsvRelation.scala:249)
+16/11/05 12:14:14 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:14:14 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:14:14 INFO DAGScheduler: Submitting ResultStage 10 (/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv MapPartitionsRDD[47] at textFile at TextFile.scala:30), which has no missing parents
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 3.2 KB, free 1032.1 KB)
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 1969.0 B, free 1034.0 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on localhost:61542 (size: 1969.0 B, free: 511.0 MB)
+16/11/05 12:14:14 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:14:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv MapPartitionsRDD[47] at textFile at TextFile.scala:30)
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+16/11/05 12:14:14 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 14, localhost, partition 0,PROCESS_LOCAL, 2545 bytes)
+16/11/05 12:14:14 INFO Executor: Running task 0.0 in stage 10.0 (TID 14)
+16/11/05 12:14:14 INFO HadoopRDD: Input split: file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv:0+1929
+16/11/05 12:14:14 INFO Executor: Finished task 0.0 in stage 10.0 (TID 14). 2332 bytes result sent to driver
+16/11/05 12:14:14 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 14) in 4 ms on localhost (1/1)
+16/11/05 12:14:14 INFO DAGScheduler: ResultStage 10 (take at CsvRelation.scala:249) finished in 0.004 s
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+16/11/05 12:14:14 INFO DAGScheduler: Job 8 finished: take at CsvRelation.scala:249, took 0.007281 s
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 208.5 KB, free 1242.5 KB)
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 19.3 KB, free 1261.8 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.0 MB)
+16/11/05 12:14:14 INFO SparkContext: Created broadcast 16 from textFile at TextFile.scala:30
+16/11/05 12:14:14 INFO ParseDriver: Parsing command: SELECT *
+FROM `sparklyr_tmp_56904354a0d5` AS `zzz3`
+WHERE (0 = 1)
+16/11/05 12:14:14 INFO ParseDriver: Parse Completed
+16/11/05 12:14:14 INFO ParseDriver: Parsing command: SELECT *
+FROM `sparklyr_tmp_56904354a0d5`
+LIMIT 10
+16/11/05 12:14:14 INFO ParseDriver: Parse Completed
+16/11/05 12:14:14 INFO FileInputFormat: Total input paths to process : 1
+16/11/05 12:14:14 INFO SparkContext: Starting job: collect at utils.scala:181
+16/11/05 12:14:14 INFO DAGScheduler: Got job 9 (collect at utils.scala:181) with 1 output partitions
+16/11/05 12:14:14 INFO DAGScheduler: Final stage: ResultStage 11 (collect at utils.scala:181)
+16/11/05 12:14:14 INFO DAGScheduler: Parents of final stage: List()
+16/11/05 12:14:14 INFO DAGScheduler: Missing parents: List()
+16/11/05 12:14:14 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[57] at collect at utils.scala:181), which has no missing parents
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 14.1 KB, free 1275.9 KB)
+16/11/05 12:14:14 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 6.9 KB, free 1282.7 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on localhost:61542 (size: 6.9 KB, free: 511.0 MB)
+16/11/05 12:14:14 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1006
+16/11/05 12:14:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[57] at collect at utils.scala:181)
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+16/11/05 12:14:14 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 15, localhost, partition 0,PROCESS_LOCAL, 2545 bytes)
+16/11/05 12:14:14 INFO Executor: Running task 0.0 in stage 11.0 (TID 15)
+16/11/05 12:14:14 INFO CacheManager: Partition rdd_54_0 not found, computing it
+16/11/05 12:14:14 INFO HadoopRDD: Input split: file:/private/var/folders/c_/cf8z26s51w19k83l_65dy_kr0000gn/T/Rtmppejlvd/spark_csv_0a54dba188bfad39a73c560bc2c6656ead45332bb73aab9a26ed3c52ad846719.csv:0+1929
+16/11/05 12:14:14 INFO MemoryStore: Block rdd_54_0 stored as values in memory (estimated size 3.2 KB, free 1286.0 KB)
+16/11/05 12:14:14 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.0 MB)
+16/11/05 12:14:14 INFO Executor: Finished task 0.0 in stage 11.0 (TID 15). 4576 bytes result sent to driver
+16/11/05 12:14:14 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 15) in 19 ms on localhost (1/1)
+16/11/05 12:14:14 INFO DAGScheduler: ResultStage 11 (collect at utils.scala:181) finished in 0.019 s
+16/11/05 12:14:14 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+16/11/05 12:14:14 INFO DAGScheduler: Job 9 finished: collect at utils.scala:181, took 0.023394 s
+16/11/05 12:14:15 INFO HiveMetaStore: 0: get_tables: db=default pat=.*
+16/11/05 12:14:15 INFO audit: ugi=robertcrozier	ip=unknown-ip-addr	cmd=get_tables: db=default pat=.*	
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_17_piece0 on localhost:61542 in memory (size: 6.9 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 33
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_15_piece0 on localhost:61542 in memory (size: 1969.0 B, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 31
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_14_piece0 on localhost:61542 in memory (size: 19.3 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_13_piece0 on localhost:61542 in memory (size: 6.7 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 30
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_12_piece0 on localhost:61542 in memory (size: 6.8 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 29
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_10_piece0 on localhost:61542 in memory (size: 1972.0 B, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 27
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_9_piece0 on localhost:61542 in memory (size: 19.3 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_8_piece0 on localhost:61542 in memory (size: 6.7 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 26
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_7_piece0 on localhost:61542 in memory (size: 4.6 KB, free: 511.0 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 25
+16/11/05 12:34:58 INFO BlockManagerInfo: Removed broadcast_6_piece0 on localhost:61542 in memory (size: 8.6 KB, free: 511.1 MB)
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned accumulator 24
+16/11/05 12:34:58 INFO ContextCleaner: Cleaned shuffle 1
+16/11/05 16:04:49 WARN HeartbeatReceiver: Removing executor driver with no recent heartbeats: 128545 ms exceeds timeout 120000 ms
+16/11/05 16:04:49 ERROR TaskSchedulerImpl: Lost executor driver on localhost: Executor heartbeat timed out after 128545 ms
+16/11/05 16:04:49 INFO DAGScheduler: Executor lost: driver (epoch 2)
+16/11/05 16:04:49 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:04:49 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:04:49 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:04:49 INFO BlockManagerMasterEndpoint: Trying to remove executor driver from BlockManagerMaster.
+16/11/05 16:04:49 WARN SparkContext: Killing executors is only supported in coarse-grained mode
+16/11/05 16:04:49 INFO BlockManagerMasterEndpoint: Removing block manager BlockManagerId(driver, localhost, 61542)
+16/11/05 16:04:49 INFO BlockManagerMaster: Removed driver successfully in removeExecutor
+16/11/05 16:04:49 INFO BlockManagerMasterEndpoint: Registering block manager localhost:61542 with 511.1 MB RAM, BlockManagerId(driver, localhost, 61542)
+16/11/05 16:04:49 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:04:49 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:04:49 INFO DAGScheduler: Host added was in lost list earlier: localhost
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:04:49 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:04:49 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:04:49 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:04:49 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:04:49 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:04:49 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:04:49 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:04:49 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:04:49 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:04:49 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:04:49 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:04:49 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:04:49 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:04:59 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:04:59 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:04:59 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:04:59 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:04:59 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:04:59 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:05:09 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:05:09 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:05:09 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:05:09 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:05:09 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:05:09 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:05:19 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:05:19 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:05:19 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:05:19 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:05:19 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:05:19 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:05:29 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:05:29 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:05:29 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:05:29 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:05:29 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:05:29 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:05:39 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:05:39 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:05:39 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:05:39 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:05:39 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:05:39 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:20:48 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:20:48 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:20:48 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:20:48 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:20:48 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:20:48 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:00 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:00 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:00 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:00 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:00 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:00 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:00 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:00 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:00 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:10 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:10 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:10 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:10 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:10 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:10 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:20 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:20 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:20 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:20 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:20 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:20 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:30 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:30 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:30 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:30 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:30 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:30 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:40 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:40 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:40 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:40 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:40 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:40 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO Executor: Told to re-register on heartbeat
+16/11/05 16:49:50 INFO BlockManager: BlockManager re-registering with master
+16/11/05 16:49:50 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 16:49:50 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 16:49:50 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 16:49:50 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 16:49:50 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO Executor: Told to re-register on heartbeat
+16/11/05 17:04:59 INFO BlockManager: BlockManager re-registering with master
+16/11/05 17:04:59 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 17:04:59 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 17:04:59 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 17:04:59 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 17:04:59 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:06 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:06 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:06 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:06 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:06 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:06 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:06 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:06 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:06 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:13 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:13 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:13 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:13 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:13 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:13 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:23 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:23 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:23 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:23 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:23 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:23 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:33 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:33 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:33 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:33 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:33 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:33 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO Executor: Told to re-register on heartbeat
+16/11/05 19:05:43 INFO BlockManager: BlockManager re-registering with master
+16/11/05 19:05:43 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 19:05:43 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 19:05:43 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 19:05:43 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 19:05:43 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:05:33 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:05:33 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:05:33 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:05:33 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:05:33 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:05:33 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:05:33 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:05:33 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:05:33 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:05:42 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:05:42 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:05:42 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:05:42 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:05:42 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:05:42 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:05:52 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:05:52 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:05:52 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:05:52 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:05:52 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:05:52 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:06:02 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:06:02 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:06:02 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:06:02 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:06:02 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:06:02 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:06:12 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:06:12 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:06:12 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:06:12 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:06:12 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:06:12 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:06:22 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:06:22 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:06:22 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:06:22 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:06:22 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:06:22 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:26:42 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:26:42 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:26:42 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:26:42 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:26:42 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:26:42 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:26:45 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:26:45 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:26:45 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:26:45 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:26:45 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:26:45 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:26:55 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:26:55 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:26:55 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:26:55 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:26:55 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:26:55 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:27:05 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:27:05 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:27:05 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:27:05 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:27:05 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:27:05 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:27:15 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:27:15 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:27:15 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:27:15 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:27:15 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:27:15 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:27:25 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:27:25 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:27:25 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:27:25 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:27:25 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:27:25 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:27:35 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:27:35 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:27:35 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:27:35 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:27:35 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:27:35 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO Executor: Told to re-register on heartbeat
+16/11/05 21:42:45 INFO BlockManager: BlockManager re-registering with master
+16/11/05 21:42:45 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 21:42:45 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 21:42:45 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 21:42:45 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 21:42:45 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:06 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:06 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:06 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:06 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:06 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:06 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:07 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:07 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:07 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:07 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:07 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:07 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:17 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:17 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:17 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:17 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:17 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:17 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:27 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:27 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:27 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:27 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:27 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:27 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:37 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:37 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:37 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:37 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:37 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:37 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:47 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:47 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:47 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:47 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:47 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:47 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:03:57 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:03:57 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:03:57 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:03:57 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:03:57 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:03:57 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO Executor: Told to re-register on heartbeat
+16/11/05 22:19:08 INFO BlockManager: BlockManager re-registering with master
+16/11/05 22:19:08 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/05 22:19:08 INFO BlockManagerMaster: Registered BlockManager
+16/11/05 22:19:08 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/05 22:19:08 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/05 22:19:08 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)

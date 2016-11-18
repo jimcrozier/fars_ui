@@ -1,0 +1,144 @@
+16/11/06 00:19:13 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:13 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:13 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:13 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:13 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:13 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:13 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:14 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:14 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:14 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:14 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:14 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:14 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:22 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:22 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:22 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:22 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:22 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:22 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:32 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:32 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:32 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:32 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:32 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:32 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:42 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:42 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:42 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:42 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:42 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:42 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO Executor: Told to re-register on heartbeat
+16/11/06 00:19:52 INFO BlockManager: BlockManager re-registering with master
+16/11/06 00:19:52 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 00:19:52 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 00:19:52 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 00:19:52 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 00:19:52 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:03 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:03 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:03 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:03 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:03 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:03 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:03 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:03 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:03 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:09 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:09 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:09 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:09 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:09 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:09 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:19 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:19 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:19 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:19 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:19 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:19 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:29 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:29 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:29 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:29 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:29 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:29 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO Executor: Told to re-register on heartbeat
+16/11/06 01:03:39 INFO BlockManager: BlockManager re-registering with master
+16/11/06 01:03:39 INFO BlockManagerMaster: Trying to register BlockManager
+16/11/06 01:03:39 INFO BlockManagerMaster: Registered BlockManager
+16/11/06 01:03:39 INFO BlockManager: Reporting 10 blocks to the master.
+16/11/06 01:03:39 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added rdd_54_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on localhost:61542 (size: 19.3 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added rdd_39_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added rdd_14_1 in memory on localhost:61542 (size: 3.1 KB, free: 511.1 MB)
+16/11/06 01:03:39 INFO BlockManagerInfo: Added rdd_14_0 in memory on localhost:61542 (size: 3.2 KB, free: 511.1 MB)

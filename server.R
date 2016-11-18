@@ -24,19 +24,22 @@ library(plotly)
 library(sparklyr)
 
 ## Load functions: 
-source("functions.R")
+source("./../R/functions.R")
 
 #############################
 ## INGEST AND PREPARE DATA ##
 #############################
-mod_dat <- readRDS("mod_dat_all.rds")
+# mod_dat1 <- readRDS("mod_dat_all_1.rds")
+# mod_dat2 <- readRDS("mod_dat_all_2.rds")
+# mod_dat3 <- readRDS("mod_dat_all_3.rds")
+# mod_dat = rbind(mod_dat1,mod_dat2, mod_dat3)
 map_dat <- readRDS("mapdata.rds")
-
+sc_crashdata = sample_n(sc_crashdata, 1000)
 ## Initialize Spark Context and push data to Spark
-sc <- spark_connect(master = "local")
+#sc <- spark_connect(master = "local")
 
-sc_crashdata <- copy_to(sc, mod_dat, 'sc_crashdata', overwrite = T)
-tbl_cache(sc, 'sc_crashdata')
+#sc_crashdata <- copy_to(sc, mod_dat, 'sc_crashdata', overwrite = T)
+#tbl_cache(sc, 'sc_crashdata')
 
 ## Number of deaths for each manufacturer by year
 maker_fatals <- group_by(sc_crashdata, year, maker) %>% 
@@ -152,12 +155,17 @@ shinyServer(function(input, output) {
   ## Create model score plot, this need to be documented: 
   output$modelscore <- renderPlot({
     
-    pred <- model_fn(dataIn = dataIn,
-                     varsinmodel = input$varsinmodel,
-                     todummies = FALSE,
-                     holdout = input$holdout,
-                     model_in = input$model)$pred
-    
+    # pred <- model_fn(dataIn = dataIn,
+    #                  varsinmodel = input$varsinmodel,
+    #                  todummies = FALSE,
+    #                  holdout = input$holdout,
+    #                  model_in = input$model)$pred
+    withProgress(message = 'Making plot', value = 0, {
+    sc_crashdata2 = sc_crashdata %>% select_("fatality_ind",input$varsinmodel) %>% na.omit()
+   fit = ml_linear_regression(sc_crashdata2, response = "fatality_ind", features = c(input$varsinmodel))
+
+   pred = predict(fit, sc_crashdata2)
+    })
     pred <- pred %>% dplyr::mutate(quartile = ntile(pred, 10))
     predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar)))
     decileAccuracyPlot(predout)
