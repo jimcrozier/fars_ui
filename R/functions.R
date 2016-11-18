@@ -208,10 +208,10 @@ model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
                                         replace=FALSE)
   }
   if(holdout){
-    for(vari in 1:NROW(varsinmodel)){
-       id <- which(!(test_dat[,varsinmodel[vari]] %in% levels(mod_dat[,varsinmodel[vari]])))
-       test_dat[id,] <- NA
-    }
+    # for(vari in 1:NROW(varsinmodel)){
+    #    id <- which(!(test_dat[,varsinmodel[vari]] %in% levels(mod_dat[,varsinmodel[vari]])))
+    #    test_dat[id,] <- NA
+    # }
 
     pred = data.frame(depvar= test_dat$depvar, pred = predict(model, newdata = test_dat))
   } else {

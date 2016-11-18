@@ -234,7 +234,7 @@ shinyUI(
                                       label = "Model type:",
                                       choices = c('Linear Regression','Logistic Regression'),
                                       selected = 'Linear Regression'),
-                          checkboxInput("holdout", "Test"),
+                          checkboxInput("holdout", "Use holdout sampling"),
                           checkboxGroupInput("varsinmodel", "Variables to include:",
                                              choices = c("Manufacturer" = 'maker',
                                                          "Vehicle Body Type" = 'body_typ',

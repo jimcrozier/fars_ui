@@ -29,15 +29,19 @@ source("./../R/functions.R")
 #############################
 ## INGEST AND PREPARE DATA ##
 #############################
-# mod_dat1 <- readRDS("mod_dat_all_1.rds")
-# mod_dat2 <- readRDS("mod_dat_all_2.rds")
-# mod_dat3 <- readRDS("mod_dat_all_3.rds")
+# mod_dat1 <- readRDS("./data/mod_dat_all_1.rds")
+# mod_dat2 <- readRDS("./data/mod_dat_all_2.rds")
+# mod_dat3 <- readRDS("./data/mod_dat_all_3.rds")
 # mod_dat = rbind(mod_dat1,mod_dat2, mod_dat3)
-#map_dat <- readRDS("./../data/mapdata.rds")
+# mod_dat = mod_dat %>% filter(!is.na(fatality_ind))
+# samp_crashdata = sample_n(mod_dat, 100000)
+# saveRDS(samp_crashdata, file= "./data/samp_data_100k.rds")
+map_dat <- readRDS("./../data/mapdata.rds")
 
 ## Initialize Spark Context and push data to Spark
 #sc <- spark_connect(master = "local")
-sc_crashdata = sample_n(mod_dat, 10000)
+samp_data = readRDS("./../data/samp_data_100k.rds")
+sc_crashdata = sample_n(samp_data, 10000)
 #sc_crashdata <- copy_to(sc, mod_dat, 'sc_crashdata', overwrite = T)
 #tbl_cache(sc, 'sc_crashdata')
 
