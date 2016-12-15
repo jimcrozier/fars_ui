@@ -21,7 +21,9 @@ library(reshape2)
 library(noncensus)
 library(vcd)
 library(plotly)
+library(coefplot)
 #library(sparklyr)
+# library(sp)   # do we need this here to?
 
 ## Load functions: 
 source("./../R/functions.R")
@@ -40,12 +42,14 @@ map_dat <- readRDS("./../data/mapdata.rds")
 
 ## Initialize Spark Context and push data to Spark
 #sc <- spark_connect(master = "local")
+
+# note - server.R has been moved 
 samp_data = readRDS("./../data/samp_data_100k.rds")
 sc_crashdata = sample_n(samp_data, 10000)
 #sc_crashdata <- copy_to(sc, mod_dat, 'sc_crashdata', overwrite = T)
 #tbl_cache(sc, 'sc_crashdata')
 
-## Number of deaths for each manufacturer by year
+## Number of deaths for each manufacturer by year, key is year + maker
 maker_fatals <- group_by(sc_crashdata, year, maker) %>% 
   summarise(sumfatal = sum(deaths)) %>%
   arrange(desc(sumfatal)) #%>%
@@ -136,6 +140,9 @@ shinyServer(function(input, output) {
   ## MODEL SUMMARY AND SCORING ##
   ###############################
   
+  # note - do we have to redefine the same model in each of these methods? 
+  # Why don't we define model in the outer scope, I doubt model_fn is inexpensive
+  
   ## Create model summary read out: 
   output$modelsummary <- renderPrint({
     model <- model_fn(dataIn = dataIn,
@@ -154,6 +161,7 @@ shinyServer(function(input, output) {
                       holdout = input$holdout,
                       model_in = input$model)$model
     plotCoef(model)
+    # coefplot(model, title = "", xlab = "", ylab="")
   })
   
   
@@ -162,7 +170,7 @@ shinyServer(function(input, output) {
   })
   
   
-  ## Create model score plot, this need to be documented: 
+  ## Create model score plot, this needs to be documented: 
   output$modelscore <- renderPlot({
     
     pred <- model_fn(dataIn = dataIn,

@@ -15,7 +15,7 @@
 ## clean_cats() ##
 ##################
 # This function returns a vector that is the the categories (presumably)
-# that exist in the input vector 'input_nm', but only if they're above a 
+# that exist in the input vector 'input_nm' ("input name", probably), but only if they're above a 
 # certain threshold. If not, they're thrown into the "Other" category.
 clean_cats = function(df, input_nm,threshold){
   # creates a new column in character form of input_nm
@@ -42,10 +42,15 @@ clean_cats = function(df, input_nm,threshold){
 ## plotCoef(), plotCoefBase() ##
 ################################
 
+# is plotCoefBase() used anywhere? I read that Jared Lander said it does the same thing, except just without ggplot.
+# I'm going to try to replace this with the 
+
 ## Copyright (c) 2011, under the Simplified BSD License.
 ## For more information on FreeBSD see: http://www.opensource.aorg/licenses/bsd-license.php
 ## All rights reserved.
 
+
+#  - used around line 160ish of server.R
 plotCoef <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=1,LWD95=0,vertColor="grey",vertLWD=1,vertType=2,Color="blue",Intercept=TRUE,Interaction="\xD7",ShortenFactors=TRUE)
   ## Written by Jared P. Lander, www.jaredlander.com
   ## Latest draft:  10/13/2010
@@ -180,6 +185,7 @@ clean_levels = function(level_vec,threshold){
 ## model_fn() ##
 ################
 
+# model_in = model type, from {"Linear Regression", "Naive Bayes", "Logistic Regression", "Random Forest"}
 model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
   dataIn = data.frame(dataIn, stringsAsFactors = FALSE)
   runnames = varsinmodel
@@ -204,6 +210,7 @@ model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
     train_dati = 1:nrow(mod_dat)
     test_dat = mod_dat
   }
+  
   if(model_in=="Linear Regression") model = lm(depvar~., data = mod_dat)
   if(model_in=="Naive Bayes") model = naiveBayes(as.factor(depvar)~., data = mod_dat)
   if(model_in=="Logistic Regression") model = glm(depvar~., data = mod_dat,family=binomial(link='logit'))
