@@ -9,6 +9,7 @@
 ## install.packages('noncensus')
 ## install.packages('plotly')
 ## install.packages('metricsgraphics')
+## install.packages("coefplot")
 ## Load packages
 library(shiny)
 library(datasets)
@@ -71,7 +72,7 @@ makers_fatals2 <- maker_fatals
 
 ## Data for Shiny App
 dataIn <- sc_crashdata
-colnames(dataIn)[40] <-"depvar"
+colnames(dataIn)[40] <-"depvar"         # replacing 'fatality_ind' with 'depvar' (as in dependent variable)
 
 shinyServer(function(input, output) {
   
@@ -151,6 +152,7 @@ shinyServer(function(input, output) {
                       holdout = input$holdout,
                       model_in=input$model)$model
     summary(model)
+    
   })
   
   ## Plot coeficients of the model, see code for credit on chart: 
@@ -160,8 +162,8 @@ shinyServer(function(input, output) {
                       todummies = FALSE,
                       holdout = input$holdout,
                       model_in = input$model)$model
-    plotCoef(model)
-    # coefplot(model, title = "", xlab = "", ylab="")
+    # plotCoef(model)
+    coefplot(model, title = "", xlab = "", ylab="")
   })
   
   
