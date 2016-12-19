@@ -186,8 +186,13 @@ shinyServer(function(input, output) {
 
    #pred = predict(fit, sc_crashdata2)
     #})
+    
+    # Comments on the next two lines (naming confusion)
+    # 1. We're creating a new column named 'quartile', which is actually deciles. That's kind of misleading
+    # 2. Then on the next line, we're creating a column in predout called 'pred' as in "prediction", which is the mean of the
+    #    dependent variable, which is what literally happened, not the prediction. 
     pred <- pred %>% dplyr::mutate(quartile = ntile(pred, 10))
-    predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar)))
+    predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar))) # should 'depvar' be replaced with 'pred'?
     decileAccuracyPlot(predout)
     #axis(1,1:10, at = 1:10)
   })

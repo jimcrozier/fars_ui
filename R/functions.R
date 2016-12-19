@@ -50,7 +50,7 @@ clean_cats = function(df, input_nm,threshold){
 ## All rights reserved.
 
 
-#  - used around line 160ish of server.R
+#  to delete
 plotCoef <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=1,LWD95=0,vertColor="grey",vertLWD=1,vertType=2,Color="blue",Intercept=TRUE,Interaction="\xD7",ShortenFactors=TRUE)
   ## Written by Jared P. Lander, www.jaredlander.com
   ## Latest draft:  10/13/2010
@@ -118,6 +118,7 @@ plotCoef <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=1,L
   qplot(Coef,Name,data=modelCI,main=Main,xlab=XLab,ylab=YLab) + geom_vline(xintercept=0,colour=vertColor,linetype=vertType,lwd=vertLWD) + geom_line(aes(x=value),data=modelMelt95,colour=Color,lwd=LWD95) + geom_line(aes(x=value),data=modelMelt68,colour=Color,lwd=LWD68) + geom_point(colour=Color) # the actual plotting
 }
 
+# also to delete
 plotCoefBase <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=3,LWD95=1,Interaction="\xD7",Color="blue",vertType=2,vertColor="grey",ShortenFactors=TRUE)
   ## Written by Jared P. Lander, www.jaredlander.com
   ## Latest draft:  10/13/2010
@@ -174,10 +175,26 @@ plotCoefBase <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68
 }
 
 
-# this is used in the function model_fn() and summaries()
-# basically, it takes a column from the input data, and if the count is less than the threshold, 
-#            the value of that row for that column gets replaced with 
+#' Make clean levels
+#'
+#' The 'levels' are the set of values within some vector or factor in R. 
+#' This function takes in a vector, and any level that has less than or equal 
+#' to n instances (where n = threshold),  the function replaces the value with 
+#' 'unknown'. Note that it also turns whatever data type that enters into a string.
+#'
+#' @param level_vec the input vector
+#' @param threshold how many instances a level must have to not get replaced by 'unkown'
+#'
+#' @return the input vector, but with the altered levels.
+#'
+#' @examples
+#' a <- c(1, 1, 1, 1, 2, 2, 2, 3, 3, 4)
+#' clean_levels(a, 2)
+#' # returns the vector ["1", "1", "1", "1", "2, "2", "2", "unknown", "unknown", "unknown"]
+#'
+#' @export
 clean_levels = function(level_vec,threshold){
+  # note - this is really good function naming
   tab = table(level_vec) > threshold
   dftab = data.frame(tab)
   id = !level_vec %in% row.names(dftab[tab,])
@@ -192,6 +209,7 @@ clean_levels = function(level_vec,threshold){
 #' Create a model
 #'
 #' Makes a model based on data passed in, with vars that are selected in the application.
+#' You can retrieve a particular attribute from the returned list with '$', i.e. list$mod_dat
 #' 
 #'
 #' @param dataIn data passed into the function
@@ -310,11 +328,33 @@ model_fn = function(dataIn, varsinmodel, todummies, holdout, model_in){
 ## create_buckets() ##
 ######################
 
+#' Create buckets
+#'
+#' Makes quantiles in which to put continuous data
+#'
+#' @param input_vec the input vector
+#' @param cuts the number of buckets desired
+#'
+#' @return a factor of length(input_vec), with the index that corresponds to a data point in input_vec
+#'         now corresponding to that data point's bucket.
+#'
+#' @examples
+#' v <- seq(400, 28, -3)
+#' buckets <- create_buckets(v)
+#'
+#' @export
 create_buckets = function(input_vec,cuts=5){
-  out = as.factor(cut(input_vec,quantile(input_vec,probs = seq(0, 1, 1/5)),labels=F))
+  # note - this function isn't used anywhere, yet.
+  # question - this function throws the minimum of the vector passed in into the bucket '<NA>'. 
+  #            what does that mean?
+  #
+  # If it's a problem let me know and I'll fix it!
+
+  out = as.factor(cut(input_vec,quantile(input_vec,probs = seq(0, 1, 1/cuts)),labels=F))
   return(out)
 }
 
+# switch is a pretty awesome function
 test1 <- function(type) {
   switch(type,
          "1" = "lowest",
@@ -327,6 +367,22 @@ test1 <- function(type) {
 ##########################
 ## decileAccuracyPlot() ##
 ##########################
+
+#' Decile Accuracy Plot
+#'
+#' Creates the decile prediction accuracy plot on the modeling -> model scores page. 
+#' This plot shows the distribution of how probable death is given an accident.
+#'
+#' @param predout a pretty heavily processed prediction vector
+#'
+#'
+#' @examples
+#' pred <- model_fn(...)$pred  # grab pred from model_fn
+#' pred <- pred %>% dplyr::mutate(quartile = ntile(pred, 10))  # add a new column to pred called 'quartile', which is actually the corresponding decile haha
+#' predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar))) # make a new df, grouped by 'quartile', with a new column being the mean of depvar (within that decile)
+#' decileAccuracyPlot(predout)
+#'
+#' @export
 decileAccuracyPlot = function(predout){
   predout =  predout %>% filter(!is.na(predout$pred))
   barplot(predout$pred, col = "steelblue",
@@ -338,6 +394,23 @@ decileAccuracyPlot = function(predout){
 ################
 ## roccurve() ##
 ################
+
+# builds the ROC curve on page model -> model scores
+
+#' ROC Curve
+#'
+#' Plots the ROC curve. This is a graph to evaluate the model.
+#' The larger the area under the red curve within the square, the better the model. 
+#'
+#' @param pred the prediction gathered from the constrcuted model
+#'
+#'
+#' @examples
+#' # pr is a vector of the predictions, we now create a standardized prediction pbject
+#' pred <- prediction(pr, test_dat$depvar)
+#' roccurve(pred)
+#'
+#' @export
 roccurve = function(pred){
   pe <- performance(pred, "tpr", "fpr")
   au <- performance(pred, "auc")@y.values[[1]]
@@ -352,9 +425,13 @@ roccurve = function(pred){
                     label=paste("AUC =", round(au, 2)))
   print(p)
 }  
+
+
 #################
 ## summaries() ##
 #################
+
+# line 264 in server.R, todo. 
   summaries = function(input_nm, df, todummies, todummies3, runnames){
     #runnames = input$varsinmodel
     #if(todummies | todummies3){
