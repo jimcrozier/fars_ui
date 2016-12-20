@@ -9,6 +9,7 @@
 ## install.packages('noncensus')
 ## install.packages('plotly')
 ## install.packages('metricsgraphics')
+## install.packages("coefplot")
 ## Load packages
 library(shiny)
 library(datasets)
@@ -21,10 +22,19 @@ library(reshape2)
 library(noncensus)
 library(vcd)
 library(plotly)
+library(coefplot)
 #library(sparklyr)
+# library(sp)   # do we need this here to?
 
-## Load functions: 
-source("./../R/functions.R")
+## Load functions: clean-cats.R, create-buckets.R, decile-plot.R, roc-curve.R, model.R, summaries.R
+# source("./../R/functions.R")
+source("./../R/clean-cats.R")
+source("./../R/create-buckets.R")
+source("./../R/decile-plot.R")
+source("./../R/roc-curve.R")
+source("./../R/model.R")
+source("./../R/summaries.R")
+
 
 #############################
 ## INGEST AND PREPARE DATA ##
@@ -40,12 +50,14 @@ map_dat <- readRDS("./../data/mapdata.rds")
 
 ## Initialize Spark Context and push data to Spark
 #sc <- spark_connect(master = "local")
+
+# note - server.R has been moved 
 samp_data = readRDS("./../data/samp_data_100k.rds")
 sc_crashdata = sample_n(samp_data, 10000)
 #sc_crashdata <- copy_to(sc, mod_dat, 'sc_crashdata', overwrite = T)
 #tbl_cache(sc, 'sc_crashdata')
 
-## Number of deaths for each manufacturer by year
+## Number of deaths for each manufacturer by year, key is year + maker
 maker_fatals <- group_by(sc_crashdata, year, maker) %>% 
   summarise(sumfatal = sum(deaths)) %>%
   arrange(desc(sumfatal)) #%>%
@@ -67,7 +79,7 @@ makers_fatals2 <- maker_fatals
 
 ## Data for Shiny App
 dataIn <- sc_crashdata
-colnames(dataIn)[40] <-"depvar"
+colnames(dataIn)[40] <-"depvar"         # replacing 'fatality_ind' with 'depvar' (as in dependent variable)
 
 shinyServer(function(input, output) {
   
@@ -136,6 +148,9 @@ shinyServer(function(input, output) {
   ## MODEL SUMMARY AND SCORING ##
   ###############################
   
+  # note - do we have to redefine the same model in each of these methods? 
+  # Why don't we define model in the outer scope, I doubt model_fn is inexpensive
+  
   ## Create model summary read out: 
   output$modelsummary <- renderPrint({
     model <- model_fn(dataIn = dataIn,
@@ -144,6 +159,7 @@ shinyServer(function(input, output) {
                       holdout = input$holdout,
                       model_in=input$model)$model
     summary(model)
+    
   })
   
   ## Plot coeficients of the model, see code for credit on chart: 
@@ -153,7 +169,8 @@ shinyServer(function(input, output) {
                       todummies = FALSE,
                       holdout = input$holdout,
                       model_in = input$model)$model
-    plotCoef(model)
+    # plotCoef(model)
+    coefplot(model, title = "", xlab = "", ylab="")
   })
   
   
@@ -162,7 +179,7 @@ shinyServer(function(input, output) {
   })
   
   
-  ## Create model score plot, this need to be documented: 
+  ## Create model score plot, this needs to be documented: 
   output$modelscore <- renderPlot({
     
     pred <- model_fn(dataIn = dataIn,
@@ -176,8 +193,13 @@ shinyServer(function(input, output) {
 
    #pred = predict(fit, sc_crashdata2)
     #})
+    
+    # Comments on the next two lines (naming confusion)
+    # 1. We're creating a new column named 'quartile', which is actually deciles. That's kind of misleading
+    # 2. Then on the next line, we're creating a column in predout called 'pred' as in "prediction", which is the mean of the
+    #    dependent variable, which is what literally happened, not the prediction. 
     pred <- pred %>% dplyr::mutate(quartile = ntile(pred, 10))
-    predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar)))
+    predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar))) # should 'depvar' be replaced with 'pred'?
     decileAccuracyPlot(predout)
     #axis(1,1:10, at = 1:10)
   })

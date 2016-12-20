@@ -1,3 +1,13 @@
+# README: this file is still here, but it is no longer used.
+#         I've separated the functions into different files. 
+
+# New files: clean-cats.R, create-buckets.R, decile-plot.R, roc-curve.R, model.R, summaries.R
+# plotCoef and plotCoefBase are getting deleted (fuctionality replaced by coefPlot package)
+# clean_levels is a helper function to model_fn, so I'll put it in the model.R
+# everything else gets it's own file.
+
+# note - if it's clear in the future that clean_cats is a helper function for something, we'll put it there.
+
 
 ###################################################################################
 ## This script contains functions to be called in data prep and in the Shiny App ##
@@ -14,13 +24,39 @@
 ##################
 ## clean_cats() ##
 ##################
+# 
+
+#' Make clean categories
+#'
+#' This function returns a vector that is the the categories
+#' that exist in the input vector 'input_nm' ("input name"), 
+#' but only if they're above a certain threshold. If not, 
+#' they're thrown into the "Other" category.
+#' 
+#'
+#' @param df the data frame
+#' @param input_nm the name of the column in df we want to alter
+#' @param threshold how many instances a level must have to not get replaced by 'Other'
+#'
+#' @return the input vector, but with the altered categories.
+#'
+#' @export
 clean_cats = function(df, input_nm,threshold){
+  # creates a new column in character form of input_nm
   df$cat = as.character(df[,input_nm])
+  
+  # replaces NA with "Unkown for all rows in df
   df$cat[is.na(df$cat)] = "Unknown"
+  
+  # df = group_by(df, cat)
+  # Then create a new column in df that is percent_of_n / total rows
   df <- df %>% 
     group_by(cat) %>% 
     mutate(pct_n = n()/NROW(df))
   
+  # creates new column called 'cat2' that is the same as 
+  # df$cat, UNLESS df$pct_n is above threshold, then df$cat2
+  # for that row is "Other"
   df$cat2 = ifelse(df$pct_n>threshold, df$cat, "Other")
   
   return(df$cat2)
@@ -30,10 +66,15 @@ clean_cats = function(df, input_nm,threshold){
 ## plotCoef(), plotCoefBase() ##
 ################################
 
+# is plotCoefBase() used anywhere? I read that Jared Lander said it does the same thing, except just without ggplot.
+# I'm going to try to replace this with the coefPlot
+
 ## Copyright (c) 2011, under the Simplified BSD License.
 ## For more information on FreeBSD see: http://www.opensource.aorg/licenses/bsd-license.php
 ## All rights reserved.
 
+
+#  to delete
 plotCoef <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=1,LWD95=0,vertColor="grey",vertLWD=1,vertType=2,Color="blue",Intercept=TRUE,Interaction="\xD7",ShortenFactors=TRUE)
   ## Written by Jared P. Lander, www.jaredlander.com
   ## Latest draft:  10/13/2010
@@ -101,6 +142,7 @@ plotCoef <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=1,L
   qplot(Coef,Name,data=modelCI,main=Main,xlab=XLab,ylab=YLab) + geom_vline(xintercept=0,colour=vertColor,linetype=vertType,lwd=vertLWD) + geom_line(aes(x=value),data=modelMelt95,colour=Color,lwd=LWD95) + geom_line(aes(x=value),data=modelMelt68,colour=Color,lwd=LWD68) + geom_point(colour=Color) # the actual plotting
 }
 
+# also to delete
 plotCoefBase <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68=3,LWD95=1,Interaction="\xD7",Color="blue",vertType=2,vertColor="grey",ShortenFactors=TRUE)
   ## Written by Jared P. Lander, www.jaredlander.com
   ## Latest draft:  10/13/2010
@@ -156,6 +198,25 @@ plotCoefBase <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68
   axis(side=2,labels=modelNames,at=1:numCoef,las=labelDirec,cex.axis=CEX)		# plot the vertical axis with the names of the coefficients
 }
 
+
+#' Make clean levels
+#'
+#' The 'levels' are the set of values within some vector or factor in R. 
+#' This function takes in a vector, and any level that has less than or equal 
+#' to n instances (where n = threshold),  the function replaces the value with 
+#' 'unknown'. Note that it also turns whatever data type that enters into a string.
+#'
+#' @param level_vec the input vector
+#' @param threshold how many instances a level must have to not get replaced by 'unkown'
+#'
+#' @return the input vector, but with the altered levels.
+#'
+#' @examples
+#' a <- c(1, 1, 1, 1, 2, 2, 2, 3, 3, 4)
+#' clean_levels(a, 2)
+#' # returns the vector ["1", "1", "1", "1", "2, "2", "2", "unknown", "unknown", "unknown"]
+#'
+#' @export
 clean_levels = function(level_vec,threshold){
   tab = table(level_vec) > threshold
   dftab = data.frame(tab)
@@ -168,31 +229,85 @@ clean_levels = function(level_vec,threshold){
 ## model_fn() ##
 ################
 
-model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
+#' Create a model
+#'
+#' Makes a model based on data passed in, with vars that are selected in the application.
+#' You can retrieve a particular attribute from the returned list with '$', i.e. list$mod_dat
+#' 
+#'
+#' @param dataIn data passed into the function
+#' @param varsinmodel a list of variables to be included in the model
+#' @param todummies a boolean, true if you would like to turn the data into dummy variables
+#' @param holdout a boolean, true if the user would like to do holdout sampling (use train and test data)
+#'
+#' @return a list with everything you need to know about the model
+#'
+#' @examples
+#' model <- model_fn(dataIn = dataIn,
+#'                   varsinmodel = c("lighting", "roadtype"), # varsinmodel user selected in the ui
+#'                   todummies = FALSE,                       
+#'                   holdout = FALSE,                         # holdout user selected in the ui
+#'                   model_in="Linear Regression")$model      # model_in user selected in the ui
+#'
+#' @export
+model_fn = function(dataIn, varsinmodel, todummies, holdout, model_in){
+  # NOTES FOR US
+  #   - anywhere it says 'REVIEW THIS', it means I've suggested a change
+  #   - the biggest change I want to make is the todummies if clause, I don't think it's done correctly
+  #
+  
+
   dataIn = data.frame(dataIn, stringsAsFactors = FALSE)
   runnames = varsinmodel
+  
+  # we're modeling depvar using all the variables in runnames
   mod_dat = dataIn[,c("depvar", runnames )]
   
-        for (i in 1:NROW(runnames)){
-      if(!runnames[i] %in% c("depvar")) mod_dat[,runnames[i]] = clean_levels(mod_dat[,runnames[i]],10)
-      }
+  # note - in dr_drink, there are 0's and 1's (as expected), but also 9's. You guys know what they mean?
+  #        they get thrown out by clean_levels
   
+  # run clean_levels on each column
+  for (i in 1:NROW(runnames)){
+    # should we prevent the user from being able to choose fatality index as a feature?
+    # if they do choose it, what's the point of the model
+    if(!runnames[i] %in% c("depvar")) {
+      mod_dat[,runnames[i]] = clean_levels(mod_dat[,runnames[i]],10)
+    }
+  }
   
+  # REVIEW THIS
   if(todummies){
     for (i in 1:NROW(runnames)){
-      if(!runnames[i] %in% c("Gender","Age-range")) mod_dat[,runnames[i]] = ifelse(mod_dat[,runnames[i]]>1,1,0)
+      if(!runnames[i] %in% c("Gender","Age-range")) {
+        # not sure I understand this next line. What does it mean for "Dusk" to be greater than 1?
+        # If we're taking a column with 7 or so unique values and replacing them with just
+        # 0's and 1's, we're losing information.
+        #
+        # Here's what I think should happen - 
+        # If column 'lighting' had 3 values - 'Dusk', 'Daylight' and 'Dawn', we should split it 
+        # up into three boolean columns, (i.e. 'is_Dusk', 'is_Dawn', 'is_Daylight').
+        # 
+        # If that is the goal, I'm sure there is a package so we don't have to do it manually.
+        mod_dat[,runnames[i]] = ifelse(mod_dat[,runnames[i]]>1,1,0)
+      }
     }
   }
   
   if(holdout){
+    # get random indices for 75% of the data, then split the data into 
     train_dati <- base::sample(nrow(mod_dat), 0.75*nrow(mod_dat))
+    
+    # this works, but why isn't mod_dat overwritten on the first line?
     mod_dat = mod_dat[train_dati,]
     test_dat = mod_dat[-train_dati,]
   } else {
-    train_dati = 1:nrow(mod_dat)
+    train_dati = 1:nrow(mod_dat)    # is this line necessary? train_dati is an unused local var
     test_dat = mod_dat
   }
-  if(model_in=="Linear Regression") model = lm(depvar~., data = mod_dat)
+  
+  # make the model
+  # the user currently only has the option for linear and logistic regression
+  if(model_in=="Linear Regression") model = lm(depvar~., data = mod_dat)   # ~. means all vars not already mentioned
   if(model_in=="Naive Bayes") model = naiveBayes(as.factor(depvar)~., data = mod_dat)
   if(model_in=="Logistic Regression") model = glm(depvar~., data = mod_dat,family=binomial(link='logit'))
   if(model_in=="Random Forest"){
@@ -207,6 +322,9 @@ model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
                                         na.action=randomForest::na.roughfix,
                                         replace=FALSE)
   }
+  
+  # now score the model
+  # REVIEW THIS -> because we set 'test_dat = mod_dat' if holdout is false, this can be shortened a bit
   if(holdout){
     # for(vari in 1:NROW(varsinmodel)){
     #    id <- which(!(test_dat[,varsinmodel[vari]] %in% levels(mod_dat[,varsinmodel[vari]])))
@@ -224,7 +342,7 @@ model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
     pred = data.frame(depvar= mod_dat$depvar, pred = predict(model, newdata = mod_dat))
   }
   
-   data_in_train = data.frame(mod_dat, pred = predict(model, newdata =  mod_dat))
+  data_in_train = data.frame(mod_dat, pred = predict(model, newdata =  mod_dat))
   data_in_val = data.frame(test_dat,pred = predict(model, newdata = test_dat))
   return(list(pred=pred, model=model, test_dat = test_dat, mod_dat=mod_dat, data_in_train= data_in_train, data_in_val=data_in_val))
 }
@@ -233,11 +351,33 @@ model_fn = function(dataIn, varsinmodel,todummies,holdout,model_in){
 ## create_buckets() ##
 ######################
 
+#' Create buckets
+#'
+#' Makes quantiles in which to put continuous data
+#'
+#' @param input_vec the input vector
+#' @param cuts the number of buckets desired
+#'
+#' @return a factor of length(input_vec), with the index that corresponds to a data point in input_vec
+#'         now corresponding to that data point's bucket.
+#'
+#' @examples
+#' v <- seq(400, 28, -3)
+#' buckets <- create_buckets(v)
+#'
+#' @export
 create_buckets = function(input_vec,cuts=5){
-  out = as.factor(cut(input_vec,quantile(input_vec,probs = seq(0, 1, 1/5)),labels=F))
+  # note - this function isn't used anywhere, yet.
+  # question - this function throws the minimum of the vector passed in into the bucket '<NA>'. 
+  #            what does that mean?
+  #
+  # If it's a problem let me know and I'll fix it!
+
+  out = as.factor(cut(input_vec,quantile(input_vec,probs = seq(0, 1, 1/cuts)),labels=F))
   return(out)
 }
 
+# switch is a pretty awesome function
 test1 <- function(type) {
   switch(type,
          "1" = "lowest",
@@ -250,6 +390,22 @@ test1 <- function(type) {
 ##########################
 ## decileAccuracyPlot() ##
 ##########################
+
+#' Decile Accuracy Plot
+#'
+#' Creates the decile prediction accuracy plot on the modeling -> model scores page. 
+#' This plot shows the distribution of how probable death is given an accident.
+#'
+#' @param predout a pretty heavily processed prediction vector
+#'
+#'
+#' @examples
+#' pred <- model_fn(...)$pred  # grab pred from model_fn
+#' pred <- pred %>% dplyr::mutate(quartile = ntile(pred, 10))  # add a new column to pred called 'quartile', which is actually the corresponding decile haha
+#' predout <- dplyr::summarise( dplyr::group_by(pred, quartile), pred = mean(as.numeric(depvar))) # make a new df, grouped by 'quartile', with a new column being the mean of depvar (within that decile)
+#' decileAccuracyPlot(predout)
+#'
+#' @export
 decileAccuracyPlot = function(predout){
   predout =  predout %>% filter(!is.na(predout$pred))
   barplot(predout$pred, col = "steelblue",
@@ -261,6 +417,21 @@ decileAccuracyPlot = function(predout){
 ################
 ## roccurve() ##
 ################
+
+#' ROC Curve
+#'
+#' Plots the ROC curve. This is a graph to evaluate the model.
+#' The larger the area under the red curve within the square, the better the model. 
+#'
+#' @param pred the prediction gathered from the constrcuted model
+#'
+#'
+#' @examples
+#' # pr is a vector of the predictions, we now create a standardized prediction pbject
+#' pred <- prediction(pr, test_dat$depvar)
+#' roccurve(pred)
+#'
+#' @export
 roccurve = function(pred){
   pe <- performance(pred, "tpr", "fpr")
   au <- performance(pred, "auc")@y.values[[1]]
@@ -275,29 +446,55 @@ roccurve = function(pred){
                     label=paste("AUC =", round(au, 2)))
   print(p)
 }  
+
+
 #################
 ## summaries() ##
 #################
-  summaries = function(input_nm, df, todummies, todummies3, runnames){
-    #runnames = input$varsinmodel
-    #if(todummies | todummies3){
-    #  for (i in 1:NROW(runnames)){
-    #    if(!runnames[i] %in% c("Gender","Age-range")) df[,runnames[i]] = ifelse(df[,runnames[i]]>1,1,0)
-    #  }
-    # }
-    df = df %>% select_("depvar", input_nm)
-       df[,input_nm]= clean_levels(df[,input_nm],50)
-    
 
-    sums = data.frame(varname = input_nm, 
-                      dplyr::summarize(group_by_(df, as.name(paste(input_nm))),
-                                       n = n(), 
-                                       pct_n = n()/NROW(df),
-                                       avg = mean(depvar)))
-    names(sums) = c("varname", "value","n", "pct_n", "avg_fatality")
-    #sums$pct_n = sums$n/NROW(df)
-    sums$value = as.character(sums$value)
-    return(sums)
-  }
+#' Summaries
+#'
+#' Creates a data frame that summarize the input df, with respect
+#' to the variable input_nm.
+#'
+#' @param input_nm the variable name on which to summarize
+#' @param df the data frame in which the data sits
+#' @param todummies a boolean that if true, the data will be makde into dummy variables
+#' @param todummies3 a boolean that if true, the data will be makde into dummy variables
+#' @param runnames the variables selected in the model - only used in commented out dummy variable code
+#' 
+#'
+#'
+#' @examples
+#' summaries('night', 
+#'              df = dataIn,
+#'              todummies = FALSE,
+#'              todummies3 = FALSE,
+#'              runnames = c("dr_drink", "roadtype", "lighting", "weathercond"))
+#'
+#' @export
+summaries = function(input_nm, df, todummies, todummies3, runnames){
+  #runnames = input$varsinmodel
+  #if(todummies | todummies3){
+  #  for (i in 1:NROW(runnames)){
+  #    if(!runnames[i] %in% c("Gender","Age-range")) df[,runnames[i]] = ifelse(df[,runnames[i]]>1,1,0)
+  #  }
+  # }
+  df = df %>% select_("depvar", input_nm)
+     df[,input_nm]= clean_levels(df[,input_nm],50)
+  
+
+  sums = data.frame(varname = input_nm, 
+                    dplyr::summarize(group_by_(df, as.name(paste(input_nm))),
+                                     n = n(), 
+                                     pct_n = n()/NROW(df),
+                                     avg = mean(depvar)))
+  names(sums) = c("varname", "value","n", "pct_n", "avg_fatality")
+  #sums$pct_n = sums$n/NROW(df)
+  sums$value = as.character(sums$value)
+  return(sums)
+}
+  
+
 
 
