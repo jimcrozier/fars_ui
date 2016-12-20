@@ -26,8 +26,15 @@ library(coefplot)
 #library(sparklyr)
 # library(sp)   # do we need this here to?
 
-## Load functions: 
-source("./../R/functions.R")
+## Load functions: clean-cats.R, create-buckets.R, decile-plot.R, roc-curve.R, model.R, summaries.R
+# source("./../R/functions.R")
+source("./../R/clean-cats.R")
+source("./../R/create-buckets.R")
+source("./../R/decile-plot.R")
+source("./../R/roc-curve.R")
+source("./../R/model.R")
+source("./../R/summaries.R")
+
 
 #############################
 ## INGEST AND PREPARE DATA ##

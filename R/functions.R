@@ -1,3 +1,13 @@
+# README: this file is still here, but it is no longer used.
+#         I've separated the functions into different files. 
+
+# New files: clean-cats.R, create-buckets.R, decile-plot.R, roc-curve.R, model.R, summaries.R
+# plotCoef and plotCoefBase are getting deleted (fuctionality replaced by coefPlot package)
+# clean_levels is a helper function to model_fn, so I'll put it in the model.R
+# everything else gets it's own file.
+
+# note - if it's clear in the future that clean_cats is a helper function for something, we'll put it there.
+
 
 ###################################################################################
 ## This script contains functions to be called in data prep and in the Shiny App ##
@@ -14,9 +24,23 @@
 ##################
 ## clean_cats() ##
 ##################
-# This function returns a vector that is the the categories (presumably)
-# that exist in the input vector 'input_nm' ("input name", probably), but only if they're above a 
-# certain threshold. If not, they're thrown into the "Other" category.
+# 
+
+#' Make clean categories
+#'
+#' This function returns a vector that is the the categories
+#' that exist in the input vector 'input_nm' ("input name"), 
+#' but only if they're above a certain threshold. If not, 
+#' they're thrown into the "Other" category.
+#' 
+#'
+#' @param df the data frame
+#' @param input_nm the name of the column in df we want to alter
+#' @param threshold how many instances a level must have to not get replaced by 'Other'
+#'
+#' @return the input vector, but with the altered categories.
+#'
+#' @export
 clean_cats = function(df, input_nm,threshold){
   # creates a new column in character form of input_nm
   df$cat = as.character(df[,input_nm])
@@ -194,7 +218,6 @@ plotCoefBase <- function(model,Main="",YLab="",XLab="",labelDirec=2,CEX=.8,LWD68
 #'
 #' @export
 clean_levels = function(level_vec,threshold){
-  # note - this is really good function naming
   tab = table(level_vec) > threshold
   dftab = data.frame(tab)
   id = !level_vec %in% row.names(dftab[tab,])
@@ -395,8 +418,6 @@ decileAccuracyPlot = function(predout){
 ## roccurve() ##
 ################
 
-# builds the ROC curve on page model -> model scores
-
 #' ROC Curve
 #'
 #' Plots the ROC curve. This is a graph to evaluate the model.
@@ -431,28 +452,48 @@ roccurve = function(pred){
 ## summaries() ##
 #################
 
-# line 264 in server.R, todo. 
-  summaries = function(input_nm, df, todummies, todummies3, runnames){
-    #runnames = input$varsinmodel
-    #if(todummies | todummies3){
-    #  for (i in 1:NROW(runnames)){
-    #    if(!runnames[i] %in% c("Gender","Age-range")) df[,runnames[i]] = ifelse(df[,runnames[i]]>1,1,0)
-    #  }
-    # }
-    df = df %>% select_("depvar", input_nm)
-       df[,input_nm]= clean_levels(df[,input_nm],50)
-    
+#' Summaries
+#'
+#' Creates a data frame that summarize the input df, with respect
+#' to the variable input_nm.
+#'
+#' @param input_nm the variable name on which to summarize
+#' @param df the data frame in which the data sits
+#' @param todummies a boolean that if true, the data will be makde into dummy variables
+#' @param todummies3 a boolean that if true, the data will be makde into dummy variables
+#' @param runnames the variables selected in the model - only used in commented out dummy variable code
+#' 
+#'
+#'
+#' @examples
+#' summaries('night', 
+#'              df = dataIn,
+#'              todummies = FALSE,
+#'              todummies3 = FALSE,
+#'              runnames = c("dr_drink", "roadtype", "lighting", "weathercond"))
+#'
+#' @export
+summaries = function(input_nm, df, todummies, todummies3, runnames){
+  #runnames = input$varsinmodel
+  #if(todummies | todummies3){
+  #  for (i in 1:NROW(runnames)){
+  #    if(!runnames[i] %in% c("Gender","Age-range")) df[,runnames[i]] = ifelse(df[,runnames[i]]>1,1,0)
+  #  }
+  # }
+  df = df %>% select_("depvar", input_nm)
+     df[,input_nm]= clean_levels(df[,input_nm],50)
+  
 
-    sums = data.frame(varname = input_nm, 
-                      dplyr::summarize(group_by_(df, as.name(paste(input_nm))),
-                                       n = n(), 
-                                       pct_n = n()/NROW(df),
-                                       avg = mean(depvar)))
-    names(sums) = c("varname", "value","n", "pct_n", "avg_fatality")
-    #sums$pct_n = sums$n/NROW(df)
-    sums$value = as.character(sums$value)
-    return(sums)
-  }
+  sums = data.frame(varname = input_nm, 
+                    dplyr::summarize(group_by_(df, as.name(paste(input_nm))),
+                                     n = n(), 
+                                     pct_n = n()/NROW(df),
+                                     avg = mean(depvar)))
+  names(sums) = c("varname", "value","n", "pct_n", "avg_fatality")
+  #sums$pct_n = sums$n/NROW(df)
+  sums$value = as.character(sums$value)
+  return(sums)
+}
   
 
 
